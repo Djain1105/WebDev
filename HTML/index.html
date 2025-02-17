@@ -1,0 +1,133 @@
+<!-- Check mdn documentation for more... -->
+
+<!DOCTYPE html>                 <!-- specifies the document type for the browser-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      <!-- specifes the character set used-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      <!-- title of the webpage-->
+</head>
+<body>
+    <!-- Headings (h1, h2, etc.) -->
+    <h1>hi</h1>         <!-- these are block elements (takes complete space of that line horizontally)-->
+
+    <!-- paragraph  -->
+    <p>
+        hi this is divansh
+        <br>        <!--used for line change/break -->
+        this is divyansh
+    </p>
+
+    this is <i>divyansh</i> <br>    <!-- italic tag -->  <!-- these are inline elements (takes space only as required)-->
+    this is <b>divyansh</b> <br>    <!-- bold tag -->
+    this is <u>divyansh</u> <br>    <!-- Underlined tag -->
+    this is <s>divyansh</s> <br>    <!-- strikethrough tag -->
+
+    <!-- lists -->  <!-- we can also create nested lists -->
+    <!-- unordered lists -->
+     <ul type="square">     <!-- we can change the type to circle, disc, etc. -->
+        <li>i am first</li>
+        <li>i am second</li>
+        <li>i am third</li>
+     </ul>
+
+     <!-- ordered lists -->
+     <ol type="A" start="3">    <!-- we can change the type to a, 1, (i for roman numbers) etc. -->
+        <li>i am first</li>     <!-- start used to start from that number -->
+        <li>i am second</li>
+        <li>i am third</li>
+     </ol>
+
+
+     <!-- Tables -->
+
+     <table align="center" border="1" cellspacing="10" cellpadding="5">
+        <tr>    <!-- to create row in a table-->
+            <td>hi</td>     <!-- to add elemetns in the row -->
+            <td>hi</td>
+            <td>hi</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">bi</td>     <!-- colspan to take space of that much comlumns (we can also use rowspan)-->
+            <td>bi</td>
+        </tr>
+     </table>
+
+     <!-- Anchor Links -->      <!-- hyperlink -->
+     
+     <a href="https://google.com" target="_blank">Go to google</a>      <!-- add targets to specify how to open the page of this hyperlink like on the same page or new window -->
+     <br>
+     <a href="./index.html"> This page</a>      <!-- we can go on any html file also by entering the path -->
+    
+     <!-- to redirect it to a section on same page -->
+     <ul><b>contents</b>
+        <li><a href="#p1">go to para 1</a></li>     <!-- use # to call the element via id -->
+        <li><a href="#p2">go to para 2</a></li>
+     </ul>
+     <p id="p1"> hi this is part 1</p>      <!-- use id to specify the element -->
+     <p id="p2"> hi this is part 2</p>
+
+     <!-- iFrames -->   <!-- Inline Elements -->
+
+     <iframe src="https://example.com" frameborder="1" width="400" height="400"></iframe>      <!-- page inside a page -->
+     <br>
+     <ul>           <!-- Opening a page in iframe by clicking on a link -->
+        <li><a href="https://example.com" target="frame2">Go to example through iframe</a></li>
+     </ul>
+     <iframe name="frame2" src="https://exmaple.com" frameborder="1" width="400" height="400"></iframe>
+     <br>
+
+     <!-- media tags -->
+     <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" alt="photo error" height="400" width="400">    <!-- image tag -->
+     <br>
+     <video src="https://www.youtube.com/watch?v=kJQP7kiw5Fk" width="400" controls preload="none"></video>     <!-- video tag (preload to select when to load thumbnail, timestamp, etc.)-->
+     <br>
+     <audio src=""></audio> <!-- audio tag -->
+     <br>
+
+     <!-- input element -->     <!-- Inline Element -->
+      <h3>Type your input here</h3>
+     <input type="text">        <!-- to type some data (type can be password, number, etc. )-->
+     <br>
+     <!-- example -->
+      <h3>Select a option</h3>
+      <input name="gender" type="radio">Male        <!-- we use name here so that only 1 of the buttons is selected-->
+      <input name="gender" type="radio">Female
+      <input name="gender" type="radio">Trans
+
+      <h3>Select a option</h3>
+      <input type="checkbox" id="a"><label for="a">A</label>        <!-- using label we can click on value also to select the checkbox -->
+      <input type="checkbox" id="b"><label for="b">B</label>
+      <input type="checkbox" id="c"><label for="c">C</label>
+     <br>
+     
+     <!-- Text Area -->
+      <textarea></textarea>
+    <br>
+
+     <!-- Select from a dropdown list -->
+      <select>      <!-- Select Single option -->
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+        <option>option 4</option>
+      </select>
+
+      <select multiple>     <!-- Select multiple options -->
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+        <option>option 4</option>
+      </select>
+
+      <!-- Forms -->
+
+      <h3>Forms</h3>
+      <form action="https://google.com/search">
+        <input name="q">
+        <button type="submit">Search</button>
+      </form>
+
+</body>
+</html>
+
