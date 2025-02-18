@@ -1,0 +1,11 @@
+/* Check mdn documentation */
+/* Check css-tricks.com */
+/* bootstrap (framework for CSS) */
+
+div {           /* these get applied to all the elements */
+    color : blue;
+    font-size: 25pt;
+}
+p {
+    background-color: azure;
+}

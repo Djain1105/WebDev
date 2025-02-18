@@ -1,0 +1,43 @@
+/* check Order of Inheritance for different kind of Selectors */
+/* id > class > element > * */
+
+
+* {         /* Universal Selector */
+    font-style: italic;
+}
+
+body {  /* margin gets applied only to the body */
+    margin-top: 100px;
+}
+
+div {
+    color: red;
+}
+
+p {
+    background-color: aliceblue;
+}
+
+.big {      /* Class Selector (classes can be applied to multiple elements) */
+    font-size: 25pt;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#one {      /* Id Selector (id's are unique) */
+    background-color: brown;
+}
+
+#two {
+    padding-left: 50px;
+}
+
+input:disabled {        /* Attribute Selector */
+    height: 100px;
+}
+
+input[type="text"] {
+    width: 50px;
+}

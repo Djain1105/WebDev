@@ -1,0 +1,34 @@
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+    margin: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.one {
+    transform: scale(1.1,0.5);
+}
+
+.two {
+    transform: rotateZ(10deg);
+}
+
+.three {
+    transform: translateX(50px) translateY(50px);
+}
+
+.four {
+    transform: rotate(45deg) translateX(200px);
+}
+
+.five {
+    transform: skewX(40deg) skewY(10deg);
+}
+
+.six {
+    transform: skew(10deg,10deg);
+}

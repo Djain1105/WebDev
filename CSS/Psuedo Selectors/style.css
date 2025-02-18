@@ -1,0 +1,23 @@
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: orange;
+    padding: 10px;
+    color: darkgray;
+}
+
+.box:hover {        /* Hover Psuedo Class */
+    background-color: green;
+    color: aliceblue;
+}
+
+.box:active {
+    height: 160px;
+    width: 160px;
+    font-size: 25pt;
+}
+
+input:focus {
+    font-size: 30pt;
+    width: 200px;
+}

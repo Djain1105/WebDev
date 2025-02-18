@@ -1,0 +1,48 @@
+.container {
+    margin: 30px;
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+}
+
+.item {
+    margin: 20px;
+    height: 50px;  
+    width: 50px;
+    background-color: darkcyan;
+    border: solid black 1px;
+    display: inline-block;
+    
+    animation: bounce 2s 10;
+    animation-play-state: paused;
+}
+
+/* we can use cubic-beizer functions for the timing functions */
+
+.container:active .item {   /* we can make game using this :) */
+    animation-play-state: running;
+}
+
+.one {
+    animation-timing-function: ease-in;
+}
+
+.two {
+    animation-timing-function: ease-out;
+}
+
+.three {
+    animation-timing-function: linear;
+}
+
+@keyframes bounce {
+    1% {
+        transform: scale(2);
+    }
+    50% {
+        transform: translateY(300px);
+    }
+    100% {
+
+    }
+}

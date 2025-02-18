@@ -1,0 +1,15 @@
+h2 + p {       /* Adjacent Sibling Combinators */
+    font-weight: bold;      /* this applies only to adjacent para of the heading */
+}
+
+h2 ~ p{     /* General Sibling Combinator */    
+    color: red;    /* applies to all elements coming after (younger siblings) and associated with h2 */
+}
+
+section > p {       /* Child combinator effects only the elements directly in the parent */
+    background-color: aqua;
+}
+
+section p {     /* Descendant combinator effects direct and indirect childs also */
+    font-family: monospace;
+}
