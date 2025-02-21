@@ -1,0 +1,23 @@
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    background-color: brown;
+}
+
+/* Changing the properties according to the viewport dimensions */
+
+/* For desktop, we write max-width in decreasing order*/ /* Desktop first approach */
+/* For Mobile, we write min-width in increasing order*/ /* Mobile first approach */
+
+@media (max-width: 900px) {
+    .box {
+        background-color: lime;
+    }
+}
+
+@media (max-width: 600px) {
+    .box {
+        background-color: aqua;
+    }
+}

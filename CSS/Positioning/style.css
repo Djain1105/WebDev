@@ -1,0 +1,31 @@
+.container {
+    height: auto;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    background-color: linen;
+}
+
+.item {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    font-size: 20pt;
+    background-color: mediumslateblue;
+    color: white;
+}
+
+.one > .four {              /* relative position occurs from the elements position */
+    position: relative;     /* the original place of the item is preserved and no other item will fill it */
+    left: 10px;             /* In absolute positioning, the element is positioned relative to its closest ancestor (position is fixed in terms of page) */
+}
+
+.one > .one {
+    position: fixed;    /* the element will stay at same place even when we scroll the window (fixed in terms of window) */
+}
+
+.container > .one {
+    position: sticky;   /* this will happen only till 1st container ends then applies to 2nd container and so on... */
+    top: 30px;          /* the element will stick to the window when gets top moved by 30px here */
+}           /* behaves as static till the condition is not violated and then becomes fixed */
+
