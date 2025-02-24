@@ -1,0 +1,22 @@
+{
+  "name": "web-dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Djain1105/WebDev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Djain1105/WebDev/issues"
+  },
+  "homepage": "https://github.com/Djain1105/WebDev#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

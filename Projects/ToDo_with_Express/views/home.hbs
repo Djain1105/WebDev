@@ -1,0 +1,20 @@
+{{! Handlebars (Template Language eg.=> pug, ejs) }}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>        {{! the double curly brackets is called Mustache Syntax }}
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <input name="newTask" type="Text" />
+      <button type="submit">ADD</button>
+    </form>
+    <ul>
+        {{#each tasks as |t|}}      {{! this is similar to for-each loop of JavaScript}}
+            <li>{{t}}</li>
+        {{/each}}
+    </ul>
+  </body>
+</html>
