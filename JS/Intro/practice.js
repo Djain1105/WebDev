@@ -79,14 +79,18 @@ let wait = function(timeout) {
     }
 
     return new Promise((resolve, reject) => {
-        setTimeout(resolve,timeout)
+        console.log("Started to wait")
+        setTimeout(function() {
+            console.log("Waited")
+            resolve();
+        }, timeout)
     })
-}
+}   
 
 wait(1000)
     .then(() => {                       // resolve fulfilled then this
-        console.log("Waited 10 Sec")
+        console.log("After Waiting")
     })
-    .catch((err) => {                   // if error then this
+    .catch((err) => {                   // if error then this 
         console.error(err)
     })
