@@ -41,6 +41,12 @@ function middleware2 (req,res,next) {       // a function that is automatically 
 }
 app.get('/x',middleware1,middleware2)       // both middleware functions are passed. next() in middleware1 function will make it to go in middleware2 function
 
+
+// we are mounting public folder on a particluar path (here xyz)
+app.use('/xyz', express.static(__dirname + "/public"))      // means whenever /xyz will be visited then server will respond with files in public (public contains that are visible publicaly like html, etc.)
+// by default index.html file from that folder will open if present, otherwise error. (otherwise we will have to type the file name in the url)
+
+
 app.listen(4444, () => {           // this activates the server. pick a port number greater then 1024 (0 to 1024 ports are reserved)
     console.log("Server started on http://localhost:4444")      // 127.0.0.1:4444 (this will return with the same as this is local host) (my ip address from wifi network can be taken and then do IP:4444 that will also open this)
 })       

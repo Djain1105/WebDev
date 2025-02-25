@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script async defer src="script.js"></script>
+  </head>
+  <body>
+    
+    <textarea rows="6" cols="30" id="txtCode"> </textarea>
+    <br />
+    <button id="btnEncode">ENCODE</button>
+    
+    <form action="/eval" method="GET">
+        <br>
+      <input style="width: 500px;" type="text" id="inpCode" name="inpCode"/>
+      <br>
+      <button type="button" id="btnEncrypt">ENCRYPT</button>
+      <button type="submit" id="btnEval">EVAL</button>
+    </form>
+    
+  </body>
+</html>
