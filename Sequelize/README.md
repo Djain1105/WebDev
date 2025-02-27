@@ -1,4 +1,5 @@
 # DATABASES: Sequelize Basics
+Sequelize is a ORM library (Object Relation Mapper)
 
 ## Setting Up Database
 

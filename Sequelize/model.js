@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const DataTypes = Sequelize.DataTypes
 const {db} = require('./connect')
 
-const Student = db.define('student', {     // to create a table
+const Student = db.define('student', {     // to create a table // first parameter of define is the name of the table
     name: {
         type: DataTypes.STRING(30),
         allowNull: false
