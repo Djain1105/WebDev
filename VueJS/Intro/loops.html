@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="newTask" />
+      <input type="number" v-model="priority" />
+      <button @click="addTask">ADD</button>
+      <ul>
+        <li v-for="task in tasks">{{task.name + " - " + task.priority}}</li>
+      </ul>
+    </div>
+
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data: {
+          tasks: [
+            {
+              name: "first task",
+              priority: 1,
+            },
+          ],
+        },
+        methods: {
+          addTask() {
+            this.tasks.push({
+              name: this.newTask,
+              priority: parseInt(this.priority),
+            });
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
