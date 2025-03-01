@@ -1,0 +1,16 @@
+#navbar {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+#nav-username {
+    font-weight: bold;
+}
+
+#footer {
+    padding: auto;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--bs-light);
+}
