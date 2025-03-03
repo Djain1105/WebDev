@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+  </head>
+  <body>
+    <h1>Socket example</h1>
+    <div>Socket ID = <span id="socketId"></span></div>
+
+    <select id="selectedColor">
+      <option>red</option>
+      <option>blue</option>
+      <option>green</option>
+      <option>yellow</option>
+      <option>cyan</option>
+      <option>magenta</option>
+    </select>
+
+    <button id="colorIt">COLOR IT NOW!</button>
+
+    <div class="container">
+      <div class="colorbox red"></div>
+      <div class="colorbox blue"></div>
+      <div class="colorbox green"></div>
+      <div class="colorbox yellow"></div>
+      <div class="colorbox cyan"></div>
+      <div class="colorbox magenta"></div>
+    </div>
+  </body>
+</html>
