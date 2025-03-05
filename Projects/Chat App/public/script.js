@@ -1,22 +1,39 @@
 let socket = io()
 
-let btnSend = document.getElementById('btnSend')
-let inpMsg = document.getElementById('inpMsg')
-let ulMsgList = document.getElementById('ulMsgList')
-
 // socket.emit will send the data to current socket only
 // io.emit will send the data to all the sockets
 // socket.broadcast.emit will send the data to all the sockets except the current one
 
-btnSend.onclick = function() {
-    socket.emit('msg_send', {
-        msg: inpMsg.value
+$('#loginBox').show()
+$('#chatBox').hide()
+
+let username;
+
+$('#btnStart').click(() => {
+    socket.emit('login', {
+        username: $('#inpUsername').val(),
+        password: $('#inpPass').val()
     })
-    inpMsg.value = ""
-}
+})
+
+socket.on('logged_in', (data) => {
+    $('#loginBox').hide()
+    $('#chatBox').show()
+})
+
+socket.on('login_failed', () => {
+    window.alert("Username or Password Wrong")
+})
+
+$('#btnSend').click(() => {
+    socket.emit('msg_send', {
+        to: $('#inpToUser').val(),
+        msg: $('#inpNewMsg').val()
+    })
+})
 
 socket.on('msg_rcvd', (data) => {
-    let liNewMsg = document.createElement('li')
-    liNewMsg.innerText = data.msg
-    ulMsgList.appendChild(liNewMsg)
+    $('#ulMsgs').append($('<li>').text(
+        `[${data.from}]: ${data.msg}`
+    ))
 })

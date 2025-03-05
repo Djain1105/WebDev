@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="/socket.io/socket.io.js"></script>         <!-- to include the socket io in html-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Socket.IO Sample</h1>
 
-    <input type="text" id="inpMsg">
-    <button id="btnSend">SEND</button>
+    <div id="loginBox"> 
+        <input type="text" id="inpUsername" placeholder="User Name">
+        <input type="password" id="inpPass" placeholder="Password">
+        <button id="btnStart"> START </button>
+    </div>
 
-    <ul id="ulMsgList"></ul>
-</body>
+    <div id="chatBox">
+        <input type="text" id="inpToUser" placeholder="Send To (default everyone)">
+        <input type="text" id="inpNewMsg" placeholder="New Message">
+        <button id="btnSend">SEND</button>
+        <ul id="ulMsgs"></ul>
+    </div>
+
+  </body>
 </html>
