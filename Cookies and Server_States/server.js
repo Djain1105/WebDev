@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+// also read statefull and stateless system
 // cookies are basically some information stored for future use or identification
 // we use express-session when we want the cookies to be stored on server side (preferred as secure). this will only have client id on client side, and all the information tracked will be on the server side
 // we use cookies-session when we want the cookies to be stored on client side
