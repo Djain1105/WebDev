@@ -1,4 +1,5 @@
 node_modules/
+images/
 .env
 .DS_Store  # MacOS system file
 *.log      # Log files
