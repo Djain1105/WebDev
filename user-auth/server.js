@@ -1,11 +1,16 @@
 const express = require('express')
 const session = require('express-session')
+const multer = require('multer')                   // library to upload files from user end
+const fs = require('fs').promises                   // used to move the file (promise based function)
+
 const { db, Users } = require('./db')
 const app = express()
-
+const upload = multer({ dest: 'uploads/' })           // creating a uplaod object using multer and providing it the folder destination to save files
+// uploads folder is just temporary folder, final files will get saved in images
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use('/images', express.static(__dirname + '/images'))
 
 app.use(session({
     resave: true,
@@ -17,11 +22,19 @@ app.get('/signup', (req, res) => {
     res.render('signup')
 })
 
-app.post('/signup', async (req, res) => {
+app.post('/signup', upload.single('avatar'), async (req, res) => {          // upload.single (upload is the object created using multer) is middlware and used when only one file is uploaded
+
+    console.log(req.file)                                                   // use req.file to access elements of the file
+    const oldPath = __dirname + '/uploads/' + req.file.filename
+    const newPath = __dirname + '/images/' + 'avatar_' + req.body.username + '.' + req.file.mimetype.split('/').pop()       // we are using mimetype to get file type
+
+    await fs.rename(oldPath, newPath)        // moving file to new path using fs
+
     const user = await Users.create({
         username: req.body.username,
         password: req.body.password,        // NOTE: in production we save hash of password
-        email: req.body.email
+        email: req.body.email,
+        avatar: '/images/' + 'avatar_' + req.body.username + '.' + req.file.mimetype.split('/').pop()       // we are not saving files in the database, they are getting saved in a folder, and we are saving their path as strings in the database
     })
 
     res.status(201).send(`User ${user.id} created`)

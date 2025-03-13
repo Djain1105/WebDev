@@ -7,12 +7,16 @@
 </head>
 <body>
     <h1>SIGN UP</h1>
-    <form action="/signup" method="POST">
+    <form action="/signup" method="POST" enctype="multipart/form-data">         <!-- we use enctype as multipart to upload the file, otherwise only the name will go in post request -->
         <input type="text" name="username" id="inpUsername" placeholder="Choose Username">
         <br>
         <input type="email" name="email" id="inpEmail" placeholder="Email Id">
         <br>
         <input type="password" name="password" id="inpPassword" placeholder="Enter Password">
+        <br>
+        <label for="avatar">Upload Profile Photo</label>
+        <input type="file" name="avatar" id="inpAvatar" placeholder="Profile Photo">
+        <br>
         <br>
         <button type="submit">SUBMIT</button>
     </form>
