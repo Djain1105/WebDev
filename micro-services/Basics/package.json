@@ -1,0 +1,21 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "Autocannon is a fast HTTP/1.1 benchmarking tool designed to test the performance of your web server. It allows you to simulate multiple concurrent requests to measure how well your server handles load.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^8.0.0",
+    "express": "^5.1.0",
+    "express-http-proxy": "^2.1.1",
+    "morgan": "^1.10.0"
+  }
+}
